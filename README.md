@@ -10,7 +10,14 @@ You can create arrays() in many differents ways; by using the constructor or usi
 
 ```
 var contacts = new Array();
-contacts = [];
+var contacts = [];
+```
+
+You can put objects into arays in many different ways as shown below:
+
+```
+contacts[0] = objectName;
+contacts.push(objectName);
 ```
 
 
