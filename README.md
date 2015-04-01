@@ -60,7 +60,9 @@ console.log(person); // Bryant
 ```
 
 ```
-var human = {name: 'Juju'}
+var human = {
+    name: 'Juju'
+}
 var anotherHuman = human;
 human.name = 'Joao';
 ```
@@ -114,6 +116,15 @@ console.log("Hmm Hmm Good");
 
 ```
 
+**Construction Notation**
+
+```
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+}
+var jujuba = new Person("Juliano", 33);
+```
 
 
 **Dot Notation**
