@@ -1,10 +1,20 @@
-LearningJavascript
+Learning-JS
 ==================
 
 My little notebook as I learn Javascript
 
 
-### Javascript Object
+## Array
+
+You can create arrays() in many differents ways; by using the constructor or using literal notation.
+
+```
+var contacts = new Array();
+contacts = [];
+```
+
+
+## Javascript Object
 
 Javascript's core — most often used and most fundamental — data type is the Object data type. The Object data type has five simple data types, or primitive data types, that are immutable, in other words, they can NOT change. THey are: Number, String, Boolean, Undefined, and Null.
 
