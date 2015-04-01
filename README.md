@@ -13,11 +13,22 @@ var contacts = new Array();
 var contacts = [];
 ```
 
-You can put objects into arays in many different ways as shown below:
+You can put objects into arrays() in many different ways as shown below:
 
 ```
 contacts[0] = objectName;
 contacts.push(objectName);
+```
+```
+function add(firstName, lastName, email, phoneNumber){
+      contacts[contacts.length] = {
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      phoneNumber: phoneNumber
+    };
+}
+add("Liane","Silva","lili@gmail.com","508.123.4433");
 ```
 
 
