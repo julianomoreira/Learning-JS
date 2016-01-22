@@ -97,9 +97,26 @@ console.log("Hmm Hmm Good");
 
 ```
 
+Please note below that you can also set property names as strings and the only case where you can't set property names as string is one of the following:
 
+- property name is a reserved keyword
+- contains spaces or special characters (anything other than numbers,letters, the dollar sign ($) or the underscore (_) character)
+- starts with a number
+
+
+
+```
+var cake = {
+    'poweder': true,
+    'flavor': 'chocolate',
+    'mixture':'vanilla'
+}
+
+```
 
 **Dot Notation**
+
+The difference between dot notation and bracket notation is when accessing a property, in that dot notation can't be used to access variables, numbers, expressions, weird characters, quotations, etc. Dot notation is safe to use access strings.
 
 ```
 var juju = new Object();
@@ -108,7 +125,18 @@ juju.gender = "male";
 juju.city = "Petrolina, PE";
 ```
 
-**Literal Notation**
+**Bracket Notation**
+
+Bracket notation can be used to access numbers, variables, weird things, etc.
+
+```
+var juju = new Object();
+juju["living"] = true;
+juju["gender"] = "male";
+juju["city"] = "Petrolina, PE";
+```
+
+**Object Literal Notation**
 
 ```
 var juju = {
@@ -173,4 +201,56 @@ for (x in window.document){
 ```
 
 One important thing to note here is that Javascript specification and host objects don't concern itself with each other. There's a dividing line between what Javascript provides and what Webkit, Mozilla, and many other host environment provide.
+
+### Arguments Keyword
+
+The arguments keyword returns an array of number and it has the length property which you can loop through. However, arguments keyword doesn't work with array-like methods (.slice, etc).
+
+```
+var add = function(a,b){
+    var results = 0;
+    for (var i =0; i < arguments.length; i++) {
+        results += arguments[i];
+    }
+    return results;
+}
+```
+
+### Constructor
+
+```
+function AnimalMaker(name) {
+    return {
+        speak: function(){
+            console.log("My name is ", name);
+        }, 
+        name: name
+    }
+}
+var myAnimal = AnimalMaker('Cheetah');
+myAnimal.speak(); || myAnimal["speak"]();
+// My name is Cheetah
+```
+
+#### Looping through an array and creating an object of each property
+
+```
+var animalNames = ['Sheep','Liger','Big Bird'];
+var farm = [];
+
+for (var i = 0; i < animalNames.length; i++){
+    farm[i] = AnimalMaker(animalNames[i]);
+}
+// or
+for (var i = 0; i < animalNames.length; i++){
+    var animal = AnimalMaker(animalNames[i]);
+    farm.push(animal);
+}
+// or
+for (var i = 0; i < animalNames.length; i++){
+    var animal = AnimalMaker(animalNames[i]);
+    farm.push(AnimalMaker(animal));
+}
+```
+
 
