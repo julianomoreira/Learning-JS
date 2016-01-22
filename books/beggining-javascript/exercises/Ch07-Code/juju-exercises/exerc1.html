@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Chapter 7: Example 1</title>
+    <script type="text/javascript">
+function window_onload(){
+    var numberForms = document.forms.length;
+    var formIndex;
+    for (formIndex = 0; formIndex < numberForms; formIndex++){
+        console.log(document.forms[formIndex].name);
+    }  
+}
+var numberOfClicks = 0;
+function myButton_onclick(){
+    numberOfClicks++;
+    document.form1.myButton.value = "You click on me " + numberOfClicks;    
+}
+function myButton_onmouseup(){
+    document.form1.myButton.value = "Mouse is going up";
+}
+function myButton_onmousedown(){
+    document.form1.myButton.value = "Mouse is going down";
+}
+    </script>
+</head>
+<body onload="window_onload()">
+    
+    <form action="" name="form1">
+        <p>
+            This is inside form1.
+        </p>
+        
+            <input type="text" name="myTextBox" size="4" maxlength="10" />
+            <input type="button" name="myButton" value="Click Me!" onmouseup="myButton_onmouseup" onmousedown="myButton_onmousedown()" />
+            
+    </form>
+    <form action="" name="form2">
+        <p>
+            This is inside form2
+        </p>
+    </form>
+    <form action="" name="form3">
+        <p>
+            This is inside form3
+        </p>
+    </form>
+</body>
+</html>
