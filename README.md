@@ -1,10 +1,38 @@
-LearningJavascript
+Learning-JS
 ==================
 
 My little notebook as I learn Javascript
 
 
-### Javascript Object
+## Array
+
+You can create arrays() in many differents ways; by using the constructor or using literal notation.
+
+```
+var contacts = new Array();
+var contacts = [];
+```
+
+You can put objects into arrays() in many different ways as shown below:
+
+```
+contacts[0] = objectName;
+contacts.push(objectName);
+```
+```
+function add(firstName, lastName, email, phoneNumber){
+      contacts[contacts.length] = {
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      phoneNumber: phoneNumber
+    };
+}
+add("Liane","Silva","lili@gmail.com","508.123.4433");
+```
+
+
+## Javascript Object
 
 Javascript's core — most often used and most fundamental — data type is the Object data type. The Object data type has five simple data types, or primitive data types, that are immutable, in other words, they can NOT change. THey are: Number, String, Boolean, Undefined, and Null.
 
@@ -43,7 +71,9 @@ console.log(person); // Bryant
 ```
 
 ```
-var human = {name: 'Juju'}
+var human = {
+    name: 'Juju'
+}
 var anotherHuman = human;
 human.name = 'Joao';
 ```
@@ -98,6 +128,16 @@ console.log("Hmm Hmm Good");
 ```
 
 Please note below that you can also set property names as strings and the only case where you can't set property names as string is one of the following:
+
+**Construction Notation**
+
+```
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+}
+var jujuba = new Person("Juliano", 33);
+```
 
 - property name is a reserved keyword
 - contains spaces or special characters (anything other than numbers,letters, the dollar sign ($) or the underscore (_) character)
@@ -171,8 +211,8 @@ The *in* operator is used to check if an object contains a given property. You s
 
 By using *for in* we can loop over all the properties in a given object. In the code below, we're going to loop over the object cody.
 
-``` 
-var cody = {age: 33, gender: 'male'} 
+```
+var cody = {age: 33, gender: 'male'}
 for (var key in cody) {
     if (key.hasOwnProperty(key)) {
         console.log(key);
@@ -223,7 +263,7 @@ function AnimalMaker(name) {
     return {
         speak: function(){
             console.log("My name is ", name);
-        }, 
+        },
         name: name
     }
 }
@@ -252,5 +292,3 @@ for (var i = 0; i < animalNames.length; i++){
     farm.push(AnimalMaker(animal));
 }
 ```
-
-
