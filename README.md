@@ -3,7 +3,6 @@ Learning-JS
 
 My little notebook as I learn Javascript
 
-
 ## Array
 
 You can create arrays() in many differents ways; by using the constructor or using literal notation.
@@ -140,7 +139,7 @@ var jujuba = new Person("Juliano", 33);
 ```
 
 - property name is a reserved keyword
-- contains spaces or special characters (anything other than numbers,letters, the dollar sign ($) or the underscore (_) character)
+- contains spaces or special characters (anything other than numbers,letters, the dollar sign ($) or the underscore (_ character)
 - starts with a number
 
 
@@ -223,7 +222,6 @@ for (var key in cody) {
 The *for in* loop has one drawback, it access the properties of the object being looped as well as properties
 
 ### Host vs Native Objects
-
 You should know that the environment in which Javascript is executed contain what are know as *host* objects. Host objects are not part of ECMAScript implementation but are available as objects during execution. For example, in a browser environment, *window* and *head* all its containing objects are known as host objects. Following our previous exercise, let's access the properties of the window object in a browser (host) environment.
 
 ```
@@ -242,21 +240,9 @@ for (x in window.document){
 
 One important thing to note here is that Javascript specification and host objects don't concern itself with each other. There's a dividing line between what Javascript provides and what Webkit, Mozilla, and many other host environment provide.
 
-### Arguments Keyword
-
-The arguments keyword returns an array of number and it has the length property which you can loop through. However, arguments keyword doesn't work with array-like methods (.slice, etc).
-
-```
-var add = function(a,b){
-    var results = 0;
-    for (var i =0; i < arguments.length; i++) {
-        results += arguments[i];
-    }
-    return results;
-}
-```
-
 ### Constructor
+
+It's a function that returns an object.
 
 ```
 function AnimalMaker(name) {
