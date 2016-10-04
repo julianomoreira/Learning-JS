@@ -46,7 +46,7 @@ One important thing to note here is that Javascript specification and host objec
 
 ### Constructor
 
-It's a function that returns an object.
+It's a function (method) that returns an object or creates an instance of an object.
 
 ```
 function AnimalMaker(name) {
@@ -61,3 +61,9 @@ var myAnimal = AnimalMaker('Cheetah');
 myAnimal.speak(); || myAnimal["speak"]();
 // My name is Cheetah
 ```
+
+### Notes on React
+
+State: only gets used if a component has an internal value that changes w/o effecting the rest of the app. Aside from that, you want to use props. 
+
+Super(): Executes the constructor of the parent class. (ES6)
