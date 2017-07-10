@@ -32,3 +32,6 @@ class SearchBar extends Component {
   }
 }
 ```
+### Worth Reading
+
+- [Understanding array.map();](https://www.discovermeteor.com/blog/understanding-javascript-map/)
