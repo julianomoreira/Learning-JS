@@ -20,11 +20,12 @@ function printPerson(person) {
 
 function list() {
     var contactsLength = contacts.length;
-    var divs = document.getElementByTagName("div");
+    // var para = document.querySelector(".para");    
     for (var i = 0; i < contactsLength; i++) {
         //printPerson(contacts[i]);
-        var newDiv = document.createElement("div");
-
+        var listItems = document.createElement("li");
+        listItems.innerHTML = contacts[i].firstName;
+        document.getElementById("para").appendChild(listItems);
     }
 }
 
