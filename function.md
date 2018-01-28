@@ -69,6 +69,23 @@ var add = function(a,b){
 }
 add.example = 'something';
 ```
+
+### Constructor function
+
+**What are constructors?**
+
+Constructor is a function that returns an object.
+
+```
+function AnimalMaker(name){
+  return {
+    speak: function() {
+      console.log('my name is ', name);
+    }
+  }
+}
+```
+
 ## Worthy of reading
 
 - [Why and how to bind methods](http://reactkungfu.com/2015/07/why-and-how-to-bind-methods-in-your-react-component-classes/)

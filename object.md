@@ -2,9 +2,9 @@
 
 Javascript's core — most often used and most fundamental — data type is the Object data type. The Object data type has five simple data types, or primitive data types, that are immutable, in other words, they can NOT change. THey are: Number, String, Boolean, Undefined, and Null.
 
-**What is an object?**
+## What is an object?
 
-Think of an object as a list in which it has list items or children. Each children has a property and a value. Here it is a very simple example:
+Think of an object as a list in which it has list items or value pairs. Each children has a property and a value. Here it is a very simple example:
 
 ```
 var myFirstObject = {
@@ -52,7 +52,7 @@ Each data property (object property that store data) has not only the name-value
 2. Enumerable Attribute: specifies whether property can be retorned in for/in loop.
 3. Writable Attribute: specifies whether the property can be changed.
 
-###Creating objects####
+### Creating objects and accessing properties
 
 Essentially, there's two ways for creating objects: Object literal (literal notation) or Object Constructor. Let's see both cases and advantages and disadvantages of each.
 
@@ -163,4 +163,30 @@ var foobarObject = {foobar: 'Foobar is code for no code'};
 var string1 = 'foo';
 var string2 = 'bar';
 console.log(foobarObject[string1 + string2]);
+```
+
+### Appending Arrays onto an Object
+
+```
+// create array with a few values
+noiseArray = ['honk','burp','sneeze','fart'];
+
+// create object with value pairs
+animals = {
+  username: 'Duffy Duck',
+  tagline: 'Yippee'
+}
+// append array noiseArray to animal object
+animals.noises = noiseArray;
+```
+
+### Calling methods on object
+
+```
+var sayHi = function () {
+  console.log('hi boy!')
+}
+var obj = {};
+obj.sayHi = sayHi;
+obj.sayHi();
 ```
