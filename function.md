@@ -86,6 +86,35 @@ function AnimalMaker(name){
 }
 ```
 
+### Looping
+
+
+```
+
+function AnimalMaker(name) {
+  return {
+    speak: function() {
+      console.log("my name is ", name);
+    },
+    name: name
+  }
+}
+
+var animalNames = ['Liger', 'Bird', 'Cheetah'];
+
+var farm = [];
+
+for (var i = 0; i < animalNames.length; i++) {
+  farm[i] = AnimalMaker(animalNames[i]);
+  console.log(farm[i]);
+}
+
+for (var i = 0; i < farm.length; i++) {
+  farm[i].speak();
+}
+```
+
+
 ## Worthy of reading
 
 - [Why and how to bind methods](http://reactkungfu.com/2015/07/why-and-how-to-bind-methods-in-your-react-component-classes/)

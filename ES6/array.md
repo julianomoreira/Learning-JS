@@ -79,3 +79,10 @@ console.log(rest); // ['Eva','Phil']
 - `sort()`
 - `map()`
 - `reduce()`
+- `find()`
+- `findIndex()`
+
+
+#### Resources
+
+- https://www.digitalocean.com/community/tutorials/how-to-use-array-methods-in-javascript-iteration-methods
