@@ -14,29 +14,53 @@ var mary = {
 
 var contacts = [bob, mary];
 
+//const printPerson = (person) => console.log(`${person.firstName} ${person.lastName}`);
+
+// Old way
 function printPerson(person) {
     console.log(person.firstName + " " + person.lastName);
 }
 
-function list() {
-    var contactsLength = contacts.length;
-    // var para = document.querySelector(".para");    
-    for (var i = 0; i < contactsLength; i++) {
-        //printPerson(contacts[i]);
-        var listItems = document.createElement("li");
-        listItems.innerHTML = contacts[i].firstName;
-        document.getElementById("para").appendChild(listItems);
-    }
+const list = () => {
+  contacts.forEach((contact) => {
+    let listItems = document.createElement("li");
+    listItems.innerHTML = `${contact.firstName} ${contact.lastName}`;
+    document.getElementById("para").appendChild(listItems);
+  });
 }
 
-function search(familyName) {
-    var allPeople = contacts.length;
-    for (var i = 0; i < allPeople; i++) {
-        if (familyName === contacts[i].lastName) {
-            printPerson(contacts[i]);
-        }
+
+// Old way
+// function list() {
+//     var contactsLength = contacts.length;
+//     // var para = document.querySelector(".para");
+//     for (var i = 0; i < contactsLength; i++) {
+//         //printPerson(contacts[i]);
+//         var listItems = document.createElement("li");
+//         listItems.innerHTML = contacts[i].firstName + " " + contacts[i].lastName;
+//         document.getElementById("para").appendChild(listItems);
+//     }
+// }
+
+
+const search = (familyName) => {    
+  contacts.forEach((contact) => {
+    if (familyName === contact.lastName) {
+      var fName = contact.firstName;
+      // console.log(printPerson);
+      // console.log(`${contact.firstName} ${contact.lastName}`);
     }
+  });
 }
+
+// function search(familyName) {
+//     var allPeople = contacts.length;
+//     for (var i = 0; i < allPeople; i++) {
+//         if (familyName === contacts[i].lastName) {
+//             printPerson(contacts[i]);
+//         }
+//     }
+// }
 
 function add(firstName,lastName,email,phoneNumber) {
     contacts[contacts.length] = {

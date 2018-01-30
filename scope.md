@@ -1,6 +1,6 @@
 ## Scope
 
-Scope won't be created until a function is executed. For example:
+Scope is a compiled time process. Scope won't be created until a function is executed. For example:
 
 ```
 var func = function(){
