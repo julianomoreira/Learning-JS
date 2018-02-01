@@ -17,9 +17,9 @@ var contacts = [bob, mary];
 //const printPerson = (person) => console.log(`${person.firstName} ${person.lastName}`);
 
 // Old way
-function printPerson(person) {
-    console.log(person.firstName + " " + person.lastName);
-}
+// function printPerson(person) {
+//     console.log(person.firstName + " " + person.lastName);
+// }
 
 const list = () => {
   contacts.forEach((contact) => {
@@ -43,11 +43,11 @@ const list = () => {
 // }
 
 
-const search = (familyName) => {    
+const search = (familyName) => {
   contacts.forEach((contact) => {
     if (familyName === contact.lastName) {
-      var fName = contact.firstName;
-      // console.log(printPerson);
+      let fName = contact.firstName;
+      //printPerson(fName);
       // console.log(`${contact.firstName} ${contact.lastName}`);
     }
   });
@@ -72,6 +72,6 @@ function add(firstName,lastName,email,phoneNumber) {
 }
 
 add ("Nephi", "Henry", "nephismail@mail.mail", "(555)-555-5555");
-add ("Juju", "Silva", "nephismail@mail.mail", "(555)-555-5555");
+add ("Juju", "Silva", "nephismail@mail.mail", "(555)-555-4444");
 
 list();

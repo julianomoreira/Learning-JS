@@ -128,3 +128,46 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 //   .reduce((a, b) => a + b, 0);
 //
 // console.log(combined);
+
+var foo = "bar";
+
+function bar() {
+  var foo = "bar"
+  console.log(foo);
+};
+
+function baz(bar) {
+  foo = "bam";
+  bam = "yay";
+}
+
+bar();
+
+function blender(fruit) {
+  var b = "fruit";
+  var y = "yogart";
+
+  function bs() {
+    console.log(b);
+    console.log( `${b} and ${y} makes ${b} swirl!`);
+    var b = "fruit2";
+  }
+  bs()
+}
+
+var inBlock = false;
+
+for (var i = 0; i < 5; i++) {
+  var inBlock = true;
+}
+
+if (inBlock) {
+  console.log('Is there block scope? ' + !inBlock);
+}
+
+var name = 'juju';
+
+(function() {
+var name = 'wes';
+console.log(name);
+})();

@@ -38,7 +38,7 @@ function blender(fruit){
 }
 ```
 
-### Precedence
+### Precedence or shadowing
 
 ```
 function go(){
@@ -63,3 +63,5 @@ if(inBlock){
   console.log('Is there block scope? ' + !inBlock);
 }
 ```
+
+Scope manager looks for formal declarations (var, function) to add to scope. If there's a variable without var it skips and the variable gets created at runtime.
