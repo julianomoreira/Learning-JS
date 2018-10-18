@@ -40,3 +40,25 @@ console.log(addFour(1));
 ```
 
 *console.dir to look at closure*
+
+```Javascript
+var closureAlert = function() {
+  var x = "Help! I'm a variable stuck in a closure."
+  var alerter = function() {
+    console.log(x);
+  }
+  setTimeout(alerter, 1000);
+  console.log('will still run after');
+}
+```
+
+```Javascript
+var closureAlert = function() {
+  var x = 0;
+  var alerter = function() {
+    console.log(++x);
+  }  
+  return alerter;
+}
+var funcStorer = closureAlert();
+```
