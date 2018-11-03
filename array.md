@@ -24,7 +24,7 @@ contacts.push(objectName);
 ```
 // adding with a function
 function add(firstName, lastName, email, phoneNumber){
-      contacts[contacts.length] = {
+      contacts = {
       firstName: firstName,
       lastName: lastName,
       email: email,
